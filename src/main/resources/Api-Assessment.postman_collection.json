@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "a78e042b-9c60-4d06-b64b-4be0fb1e789b",
+		"name": "Api-Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Index By Stock",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/index?stock=AA",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"index"
+					],
+					"query": [
+						{
+							"key": "stock",
+							"value": "AA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Index Record",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"quarter\": 1,\n        \"stock\": \"AA\",\n        \"date\": \"01/07/2011\",\n        \"open\": \"$15.82\",\n        \"high\": \"$16.72\",\n        \"low\": \"$15.78\",\n        \"close\": \"$16.42\",\n        \"volume\": 239655616,\n        \"percentChangePrice\": 3.79267,\n        \"percentChangeVolumeOverLastWeek\": 0.0,\n        \"previousWeeksVolume\": 0,\n        \"nextWeeksOpen\": \"$16.71\",\n        \"nextWeeksClose\": \"$15.97\",\n        \"percentChangeNextWeeksPrice\": -4.42849,\n        \"daysToNextDividend\": 26,\n        \"percentReturnNextDividend\": 0.182704\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/index",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bulk Insert Indexes",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"quarter\": 1,\n        \"stock\": \"AA\",\n        \"date\": \"01/07/2011\",\n        \"open\": \"$15.82\",\n        \"high\": \"$16.72\",\n        \"low\": \"$15.78\",\n        \"close\": \"$16.42\",\n        \"volume\": 239655616,\n        \"percentChangePrice\": 3.79267,\n        \"percentChangeVolumeOverLastWeek\": 0.0,\n        \"previousWeeksVolume\": 0,\n        \"nextWeeksOpen\": \"$16.71\",\n        \"nextWeeksClose\": \"$15.97\",\n        \"percentChangeNextWeeksPrice\": -4.42849,\n        \"daysToNextDividend\": 26,\n        \"percentReturnNextDividend\": 0.182704\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/index",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"index"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
